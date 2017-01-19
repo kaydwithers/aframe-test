@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="A-Frame!">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  </head>
+  <body>
+
+    <style>
+      body {
+        background-color: #e2edff;
+      }
+    </style>
+
+    <a-scene>
+
+      <a-assets>
+        <a-asset-item id="object" src="models/Avent.obj"></a-asset-item>
+        <a-asset-item id="material" src="models/Avent.mtl"></a-asset-item>
+      </a-assets>
+
+      <a-entity light="color: #fff; intensity: 0.6" position="-1 1 -1"></a-entity>
+
+      <a-plane rotation="-90 0 0" width="10" height="10" color="#b2ffce"></a-plane>
+
+      <!-- Using the asset management system. -->
+      <a-obj-model src="#object" mtl="#material"></a-obj-model>
+
+      <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+      <!--obj-model src="models/avent.obj" mtl="models/avent.mtl"></a-obj-model>-->
+
+      <!-- position(?, height, zoom), rotation(angle, rotation, ?) -->
+      <a-entity position="-2 -0.3 -3" rotation="0 -155 0">
+        <a-camera></a-camera>
+      </a-entity>
+
+    </a-scene>
+
+
+
+  </body>
+</html>
